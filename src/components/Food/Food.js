@@ -1,10 +1,11 @@
 import React from 'react';
 const Food = (props) => {
-    const {menu1,price1} = props.food;
+    const {menu,price,id} = props.food;
     return (
         <div>
-            <h3>Order this Menu : {menu1}</h3>
-            <small>Price of this Dish : {price1}</small>
+            <h3>Order this Menu : {menu}</h3>
+            <small>Price of this Dish : {price}</small>
+            <p>It has id : {id}</p>
         </div>
     );
 };
