@@ -2,8 +2,8 @@ import React from 'react';
 import Food from '../Food/Food';
 const Foods = () => {
     const foods = [
-        {id : '1', menu :"Panta Ilish" , price : "20$"},
-        {id : '2', menu : "Chicken Biriyani", price : '15$'}
+        {id : 'ilish', menu :"Panta Ilish" , price : "20$"},
+        {id : 'biriyani', menu : "Chicken Biriyani", price : '15$'}
     ];
     return (
         <div>

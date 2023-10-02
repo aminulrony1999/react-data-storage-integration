@@ -9,7 +9,7 @@ const Food = (props) => {
 
     }
     function addToCart(id){
-        console.log(`Item is added to cart, id number is ${id}`);
+        localStorage.setItem(id,1);
     }
     return (
         <div style = {design}>
