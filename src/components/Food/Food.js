@@ -1,4 +1,5 @@
 import React from 'react';
+import { addToDb } from '../localDataBase/localdb';
 const Food = (props) => {
     const {menu,price,id} = props.food;
     const design = {
@@ -9,7 +10,7 @@ const Food = (props) => {
 
     }
     function addToCart(id){
-        localStorage.setItem(id,1);
+        addToDb(id);
     }
     return (
         <div style = {design}>
