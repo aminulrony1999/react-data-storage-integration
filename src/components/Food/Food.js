@@ -1,5 +1,5 @@
 import React from 'react';
-import { addToDb } from '../localDataBase/localdb';
+import { addToDb, removeFromDb } from '../localDataBase/localdb';
 const Food = (props) => {
     const {menu,price,id} = props.food;
     const design = {
@@ -12,12 +12,16 @@ const Food = (props) => {
     function addToCart(id){
         addToDb(id);
     }
+    function removeFromCart(id){
+        removeFromDb(id);
+    }
     return (
         <div style = {design}>
             <h3>Order this Menu : {menu}</h3>
             <small>Price of this Dish : {price}</small>
             <p>It has id : {id}</p>
             <button onClick ={() => addToCart(id)}>Add to Cart</button>
+            <button onClick={() => removeFromCart(id)}>Remove</button>
         </div>
     );
 };
